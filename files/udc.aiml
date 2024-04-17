@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <category>
-    <pattern>come ti chiami?</pattern>
+    <pattern>come ti chiami</pattern>
     <template>Malnera</template>
+  </category>
+  <category>
+      <pattern>*</pattern>
+      <template>nu sacciu</template>
   </category>
 </aiml>
