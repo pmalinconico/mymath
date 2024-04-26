@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
+    <category>
+        <pattern>Ciao ^ sono *</pattern>
+        <template>Ciao <set name="nome"><star index="2"/></set></template>
+    </category>
   <category>
-    <pattern>come ti chiami</pattern>
-    <template>Malnera</template>
+    <pattern>come ti chiami ^</pattern>
+    <template><random>
+        <li>Honky Tonky</li>
+        <li>Pisistrata<br/>of course</li>
+        <li>Paolo<br/>detto Malnera</li></random></template>
+  </category>
+  <category>
+    <pattern>Come si definisce la *</pattern>
+    <template>La <star/> è un luogo geometrico</template>
   </category>
   <category>
       <pattern>*</pattern>
       <template>nu sacciu</template>
   </category>
+<category>
+    <pattern>Qual è il tuo indirizzo di residenza</pattern>
+    <template>Non ti interessa <get name="nome"/></template>
+</category>
+
+<category><pattern>Dove abiti</pattern><template><srai>QUAL È IL TUO INDIRIZZO DI RESIDENZA</srai></template></category>
+<category>
+<pattern>la <set>coniche</set> è una conica</pattern>
+<template>si, la <star/> è una conica</template>
+</category>
+<category>
+<pattern>la * è una conica</pattern>
+<template>No</template>
+</category>
 </aiml>
